@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>JavaScript Exam|Result</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body  onload="showResult()">
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="index.html">Give Exam</a>
+            <a href="markingscheme.html">Marking Scheme and Instruction</a>
+            <a href="result.html">Result</a>
+        </div>
+        
+        <div id="main">
+            <button class="openbtn" onclick="openNav()">☰ Open Menu</button>  
+        </div>
+        <div class="main-div">
+            <div id="res-id" class="result-div">
+                <h1 id="result-figure">Result: </h1>
+                <h1 id="percentage-figure">Percentage: </h1>
+                <p id="result-par"></p>
+                <button id="printres" onclick="printResult()">Print Result <i class="fa fa-print"></i></button>
+            </div>
+        </div>
+        <script src="result.js"></script>
+    </body>
+</html>

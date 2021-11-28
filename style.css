@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+}
+html {
+  font-size: 62.5%;
+}
+.main-div {
+  width: 100vw;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: #0b3c5d;
+}
+.left-div {
+  width: 20vw;
+  height: 22vw;
+  background-color: #ffff;
+  padding: 30px 50px;
+  border-radius: 10px;
+  box-shadow: 0 10px 10px -0 #000000;
+  position: absolute;
+  left: 0;
+  margin-left: 50px;
+}
+.left-div h1 {
+  margin: 10px 0px 4px 0px;
+  font-size: xx-large;
+}
+.left-div p {
+  font-size: large;
+}
+.time-div {
+  background-color: #0b3c5d;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+.inner-div {
+  width: 40vw;
+  background-color: #ffff;
+  padding: 30px 80px;
+  border-radius: 10px;
+  box-shadow: 0 10px 10px -0 #000000;
+}
+
+.inner-div h2 {
+  font-size: 35px;
+  font-weight: 400;
+  margin: 10px 0px 4px 0px;
+}
+.inner-div li {
+  font-size: 20px;
+  margin-top: 15px;
+  list-style: none;
+}
+#next,
+.btn {
+  padding: 10px 25px;
+  outline: none;
+  font-size: 20px;
+  font-size: 400;
+  /* display: block; */
+  margin: 5px;
+  border: none;
+  text-transform: uppercase;
+  color: #000000;
+  background-color: #1d2731;
+  color: white;
+  margin-top: 35px;
+}
+#prev,
+.btn {
+  padding: 10px 25px;
+  outline: none;
+  font-size: 20px;
+  font-size: 400;
+  /* display: block; */
+  margin: 5px;
+  border: none;
+  text-transform: uppercase;
+  color: white;
+  background-color: #1d2731;
+  margin-top: 35px;
+}
+#mark,
+.btn {
+  padding: 10px 25px;
+  outline: none;
+  font-size: 20px;
+  font-size: 400;
+  /* display: block; */
+  margin: 5px;
+  border: none;
+  text-transform: uppercase;
+  color: white;
+  background-color: #1d2731;
+  margin-top: 35px;
+}
+#showScore {
+  background-color: lightblue;
+  margin-top: 30px;
+  padding: 30px 40px;
+}
+.scoreArea {
+  display: none;
+}
+
+#submit,
+.btn {
+  padding: 10px 25px;
+  outline: none;
+  font-size: 20px;
+  font-size: 400;
+  /* display: block; */
+  margin: 5px;
+  border: none;
+  text-transform: uppercase;
+  color: white;
+  background-color: green;
+  margin-top: 35px;
+}
+#confirmtext,
+.p {
+  font-size: 18px;
+}
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left 0.5s;
+  padding: 16px;
+  background-color: black;
+}
+
+td,
+th {
+  cursor: pointer;
+  text-align: center;
+  background-color: #328cc1;
+  color: black;
+  font-size: large;
+  border-color: #000000;
+}
+
+.question-grid {
+  padding-top: 15px;
+  position: absolute;
+  right: 0;
+}
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {
+    padding-top: 15px;
+  }
+  .sidebar a {
+    font-size: 18px;
+  }
+}
+
+.result-div {
+  width: 40vw;
+  height: auto;
+  background-color: #ffff;
+  padding: 30px 80px;
+  border-radius: 10px;
+  box-shadow: 0 10px 10px -0 #000000;
+}
+
+.result-div,
+p {
+  font-size: large;
+}
+
+#printres {
+  padding: 10px 25px;
+  outline: none;
+  font-size: 20px;
+  font-size: 400;
+  /* display: block; */
+  margin: 5px;
+  border: none;
+  text-transform: uppercase;
+  color: white;
+  background-color: #1d2731;
+  margin-top: 35px;
+}
