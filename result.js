@@ -325,7 +325,8 @@ const testDB = [
 var correctanscount = 0;
 function showResult()
 {
-    var ansstr = localStorage.getItem("answers");
+    // var ansstr = localStorage.getItem("answers");
+    var ansstr = document.cookie;
     var ansarr = ansstr.split(",");
     for(i = 0;i<testDB.length;i++)
     {   var actans = "NA";
