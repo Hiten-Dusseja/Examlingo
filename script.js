@@ -322,7 +322,42 @@ const testDB = [
 
 
 ]   
-
+var intervals;
+function asktostart()
+{
+    const swalWithBootstrapButtons = Swal.mixin({
+        customClass: {
+          confirmButton: 'btn btn-success',
+          cancelButton: 'btn btn-danger'
+        },
+        buttonsStyling: false
+      })
+      
+      swalWithBootstrapButtons.fire({
+        title: 'Start test?',
+        text: "Do you want to start the test? ",
+        icon: 'info',
+        showCancelButton: true,
+        confirmButtonText: 'Yes, start',
+        cancelButtonText: 'See instrucions',
+        reverseButtons: true
+      }).then((result) => {
+        if (result.isConfirmed) {
+          swalWithBootstrapButtons.fire(
+            'Test started!',
+            'Your tast starts right now.',
+            'success'
+            
+          )
+          intervals = setInterval(updateCountdown,1000);
+        } else if (
+          /* Read more about handling dismissals below */
+          result.dismiss === Swal.DismissReason.cancel
+        ) {
+            window.location.href = "markingscheme.html" 
+        }
+      })
+}
 var i = 0;
 var answeredarray = [];
 var statusarray = [];
@@ -598,7 +633,6 @@ function submitExam(calledby)
 const startingMinutes = 40;
 let time = startingMinutes*60;
 const countdownel = document.getElementById('timer');
-var intervals = setInterval(updateCountdown,1000);
 function updateCountdown()
 {
     const minutes = Math.floor(time/60);
